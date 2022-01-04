@@ -7,8 +7,10 @@ import { Component} from '@angular/core';
 export class ListadoComponent {
 
   heroes:string[] = ['Spiderman', 'Ironman', 'Hulk', 'Thor', 'Zorrezno'];
-  borrado:string = "";
+  borrado:string = " ";
+  heroe:boolean = false;
   borrarHeroe():void{
     this.borrado = this.heroes.pop() || '';
+    this.heroe = this.borrado != " ";
   }
 }
